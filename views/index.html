@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video-js.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #video {
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- vjs-big-play-centered 类名的作用是让我们的播放按钮居中 -->
+    <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls>
+        <!-- 在source标签里写入我们的索引文件路径 -->
+        <source src="/chunk/index.m3u8" type="application/x-mpegURL">
+    </video>
+
+	<script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/video.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/video.js/7.10.1/lang/zh-CN.min.js"></script>
+
+    <script>
+        window.onload = () => {
+            videojs('video', {
+                language: 'zh-CN',
+            });
+        }
+    </script>
+</body>
+
+</html>
